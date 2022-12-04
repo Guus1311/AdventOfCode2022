@@ -1,9 +1,6 @@
 <?php
-$file = fopen("input.txt", "r");
-$lines = array();
-while(!feof($file)){
-    array_push($lines, fgets($file));
-}
+include "../functions.php";
+$lines = getInputLines("input.txt");
 $halves = array();
 foreach($lines as $line){
     array_push($halves, explode(",",$line));

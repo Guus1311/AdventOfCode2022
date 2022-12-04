@@ -1,10 +1,6 @@
 <?php
-$file = fopen("opdracht1.txt", "r") or die("unable to open file");
-$strings = array();
-while(!feof($file)){
-array_push($strings,fgets($file));
-}
-fclose($file);
+include "../functions.php";
+$strings = getInputLines("opdracht1.txt");
 print_r($strings);
 $sums = array();
 $i = 0;
