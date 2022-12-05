@@ -50,7 +50,7 @@ for($i = 0; $i < count($instructions); $i=$i+3){
 
 }
 //print_r($stacks);
-print("eind\n");
+//print("eind\n");
 foreach($stacks as $stack){
     print(end($stack));
 }
