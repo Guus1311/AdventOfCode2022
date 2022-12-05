@@ -30,7 +30,7 @@ while(!feof($file)){
     }
 }
 print_r($instructions);
-for($i = 0; $i < 1506; $i=$i+3){
+for($i = 0; $i < count($instructions); $i=$i+3){
     $fromstack = $stacks[$instructions[$i+1]-1];
     $tostack = $stacks[$instructions[$i+2]-1];
     //print_r($fromstack);
