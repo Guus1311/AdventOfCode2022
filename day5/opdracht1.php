@@ -8,7 +8,7 @@ $stacks = array();
 for ($i = 1; $i < 34; $i = $i + 4) {
     $singlestack = array();
     for ($j = 7; $j >= 0; $j--) {
-        if ($inputstack[$j][$i] != ' ' && $inputstack[$j][$i] != '[' && $inputstack[$j][$i] != ']') {
+        if ($inputstack[$j][$i] != ' ') {
             array_push($singlestack, $inputstack[$j][$i]);
         }
     }
