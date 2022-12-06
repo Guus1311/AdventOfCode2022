@@ -2,18 +2,19 @@
 $input = file_get_contents("input.txt");
 print($input);
 //print_r($letter);
-$i = 13;
+$checklength = 4;
+$i = $checklength-1;
 $found = false;
 while($i < strlen($input) && $found == false){
     $found = true;
-    $past14 = array();
-    for($j = 0; $j < 14; $j++){
-        array_push($past14, $input[$i-$j]);
+    $pastchar = array();
+    for($j = 0; $j < $checklength; $j++){
+        array_push($pastchar, $input[$i-$j]);
     }
-    for($k = 0; $k < 14; $k++){
-        for($l = 0; $l < 14; $l++){
+    for($k = 0; $k < $checklength; $k++){
+        for($l = 0; $l < $checklength; $l++){
         if($k != $l){
-            if($past14[$k] == $past14[$l]){
+            if($pastchar[$k] == $pastchar[$l]){
                 $found = false;
             }
         }
